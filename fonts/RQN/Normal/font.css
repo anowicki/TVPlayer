@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'RQN-Normal';
+  src: url('RQN-Normal.eot');
+  src: url('RQN-Normal.woff2') format('woff2'),
+       url('RQN-Normal.woff') format('woff'),
+       url('RQN-Normal.ttf') format('truetype'),
+       url('RQN-Normal.svg#RQN-Normal') format('svg'),
+       url('RQN-Normal.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

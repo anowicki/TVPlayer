@@ -1,0 +1,26 @@
+<VirtualHost *:80>
+    ServerName     www.tvplayer.pl.lcl
+    ServerAlias    m.tvplayer.pl.lcl tvplayer.pl.lcl
+    DocumentRoot   /var/www/sites/TVPlayer
+    DirectoryIndex index.html
+
+    ErrorLog  /var/log/apache2/www_tvplayer_pl.error
+    CustomLog /var/log/apache2/www_tvplayer_pl.access common
+
+    <Directory /var/www/sites/TVPlayer/>
+        AllowOverride All
+        Allow from All
+        Require all granted
+        
+        RewriteEngine On
+
+        # Always redirect to WWW
+        RewriteCond %{HTTP_HOST} ^tvplayer\.pl\.lcl$ [NC]
+        RewriteRule ^(.*)$ http://www.tvplayer.pl.lcl/$1 [R=301,L]
+
+        # Symfony stuff
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^(.*)$ index.html [QSA,L]
+    </Directory>
+
+</VirtualHost>

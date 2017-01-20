@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'RQN-BoldItalic';
+  src: url('RQN-BoldItalic.eot');
+  src: url('RQN-BoldItalic.woff2') format('woff2'),
+       url('RQN-BoldItalic.woff') format('woff'),
+       url('RQN-BoldItalic.ttf') format('truetype'),
+       url('RQN-BoldItalic.svg#RQN-BoldItalic') format('svg'),
+       url('RQN-BoldItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

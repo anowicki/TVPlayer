@@ -1,0 +1,290 @@
+/*!
+ *  RQN font
+ */
+@font-face {
+  font-family: 'RQN-Normal';
+  src: url('../fonts/RQN/Normal/RQN-Normal.eot');
+  src: url('../fonts/RQN/Normal/RQN-Normal.woff2') format('woff2'),
+       url('../fonts/RQN/Normal/RQN-Normal.woff') format('woff'),
+       url('../fonts/RQN/Normal/RQN-Normal.ttf') format('truetype'),
+       url('../fonts/RQN/Normal/RQN-Normal.svg#RQN-Normal') format('svg'),
+       url('../fonts/RQN/Normal/RQN-Normal.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/RQN/Normal/RQN-Normal.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RQN-NormalItalic';
+  src: url('../fonts/RQN/NormalItalic/RQN-NormalItalic.eot');
+  src: url('../fonts/RQN/NormalItalic/RQN-NormalItalic.woff2') format('woff2'),
+       url('../fonts/RQN/NormalItalic/RQN-NormalItalic.woff') format('woff'),
+       url('../fonts/RQN/NormalItalic/RQN-NormalItalic.ttf') format('truetype'),
+       url('../fonts/RQN/NormalItalic/RQN-NormalItalic.svg#RQN-NormalItalic') format('svg'),
+       url('../fonts/RQN/NormalItalic/RQN-NormalItalic.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/RQN/NormalItalic/RQN-NormalItalic.otf') format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RQN-Bold';
+  src: url('../fonts/RQN/Bold/RQN-Bold.eot');
+  src: url('../fonts/RQN/Bold/RQN-Bold.woff2') format('woff2'),
+       url('../fonts/RQN/Bold/RQN-Bold.woff') format('woff'),
+       url('../fonts/RQN/Bold/RQN-Bold.ttf') format('truetype'),
+       url('../fonts/RQN/Bold/RQN-Bold.svg#RQN-Bold') format('svg'),
+       url('../fonts/RQN/Bold/RQN-Bold.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/RQN/Bold/RQN-Bold.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'RQN-BoldItalic';
+  src: url('../fonts/RQN/BoldItalic/RQN-BoldItalic.eot');
+  src: url('../fonts/RQN/BoldItalic/RQN-BoldItalic.woff2') format('woff2'),
+       url('../fonts/RQN/BoldItalic/RQN-BoldItalic.woff') format('woff'),
+       url('../fonts/RQN/BoldItalic/RQN-BoldItalic.ttf') format('truetype'),
+       url('../fonts/RQN/BoldItalic/RQN-BoldItalic.svg#RQN-BoldItalic') format('svg'),
+       url('../fonts/RQN/BoldItalic/RQN-BoldItalic.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/RQN/BoldItalic/RQN-BoldItalic.otf') format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@import "compass/reset";
+@import "bootstrap";
+
+body{
+    min-width: 320px;
+    background: #000;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    p{
+        font-size: 16px;
+        color: #000;
+        line-height: 30px;
+    }
+    
+    a {
+        color: #888;
+    }
+
+    p, a, span {
+        margin: 0;
+        text-decoration: none;
+    }
+
+    a:hover, a.active{
+        color: #000;
+        text-decoration: none;
+    }
+    
+    i, em {
+        font-style: italic;
+    }
+    video {
+        max-width: 100%;
+    }
+    
+    .logo_text {
+        font-size: 30px;
+        padding: 30px 0;
+    }
+    
+    .container {
+        max-width: 100%;
+    }
+    
+    video::-webkit-media-controls {
+        display: none;
+    }
+    
+    #TVPlayer {
+        position: relative;
+        margin-bottom: 100px;
+        
+        #play_large {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            background-image: url(../images/play_button.png);
+            background-repeat: no-repeat;
+            background-size: 20%;
+            background-position: center;
+            cursor: pointer;
+            opacity: 0.7;
+            filter: invert(75%);
+            -webkit-filter: invert(75%);
+            -moz-filter: invert(75%);
+        }
+        
+        #play_title {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 20px;
+            width: 100%;
+            color: #ccc;
+            text-align: right;
+        }
+        
+        #TVPlayer_controlls {
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            height: 20px;
+            width: 100%;
+            background: rgba(0,0,0,0.4);
+            
+            #play {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                
+                span:first-child{
+                    position: absolute;
+                    left: 5px;
+                    top: 5px;
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    background: transparent;
+
+                    border-top: 5px solid transparent;
+                    border-bottom: 5px solid transparent;
+                    border-left: 10px solid #fff;
+                }
+                
+                &:hover {
+                    span:first-child{
+                        border-left: 10px solid #ccc;
+                    }
+                }
+                
+                &.paused {
+                    span:first-child{
+                        position: absolute;
+                        left: 5px;
+                        top: 5px;
+                        display: block;
+                        width: 4px;
+                        height: 10px;
+                        background: #fff;
+                        border: 0;
+                    }
+                    span:nth-child(2){
+                        position: absolute;
+                        left: 11px;
+                        top: 5px;
+                        display: block;
+                        width: 4px;
+                        height: 10px;
+                        background: #fff;
+                    }
+                    &:hover {
+                        span:first-child{
+                            background: #ccc;
+                        }
+                        span:nth-child(2){
+                            background: #ccc;
+                        }
+                    }
+                }
+            }
+            
+            #stop {
+                position: absolute;
+                left: 20px;
+                bottom: 0;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                
+                span {
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    width: 10px;
+                    height: 10px;
+                    background: #fff;
+                }
+                &:hover {
+                    span {
+                        background: #ccc;
+                    }
+                }
+            }
+            
+
+            
+            #progress_bar {
+                position: absolute;
+                bottom: 0;
+                left: 50px;
+                height: 20px;
+                width: calc(100% - 180px);
+                padding: 0 10px;
+                
+                div {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    width: 100%;
+                    margin-bottom: 8px;
+                    background: #999;
+                }
+                
+                #progress {
+                    width: 0%;
+                    background: #eee;
+                }
+            }
+            
+            #counter_bar {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 20px;
+                width: 120px;
+                padding: 2px 10px;
+                border-left: solid 1px #fff;
+            }
+        }
+    }
+   
+}   
+
+
+//Desktop
+@media (min-width: $screen-sm-min) {
+    body{  
+
+    }
+}
+
+// Tablet
+@media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+    body{
+
+    }
+}
+
+// Phone
+@media (max-width: $screen-xs-max) {
+    body{
+
+    }
+}
